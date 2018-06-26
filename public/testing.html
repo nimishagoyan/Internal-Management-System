@@ -1,0 +1,203 @@
+//for Invoicelist.....  
+$(document).ready(function(){
+   $('#cool').on('click', function(){
+      
+      mini(); //Your function 
+   });
+});
+   function mini(){
+      console.log("err");                                                                                                                            
+        $.ajax({
+          url: 'http://localhost:3000/Invoicelists',
+          type: 'get',
+         dataType: 'html',
+           // data: json,
+          success: function(result){
+            // alert(result);
+            document.location.href = '/Invoicelists';
+          }
+        });
+       }
+
+       function xt() {
+        // console.log("err");
+        document.getElementsByClassName("ID").disabled = false;
+         var inputs = document.getElementsByClassName('invoice');
+         for (var i = 0; i < inputs.length; i++) {
+             inputs[i].disabled = false;
+         }
+    }
+
+    // testing
+    // $(document).ready(function()
+    // {
+    //   $("#clicko").on('click',function(){
+    //    alert();
+    //   });
+    // });
+
+
+
+     $(document).ready(function(){
+        $(".list_data").on('click',function(){
+     var currentRow=$(this).closest("tr");
+     var col=currentRow.find("td:eq(0) input").val();
+     var file=col;
+     var col2=currentRow.find("td:eq(1) input").val();
+     var clientname=col2;
+     // alert(clientdate);
+     var col3=currentRow.find("td:eq(2) input").val();
+     var projectname=col3;
+
+     
+      var col4=currentRow.find("td:eq(3) input").val();
+     var date=col4;
+      var col5=currentRow.find("td:eq(4) input").val();
+     var clientid=col5;
+    // gt(file, clientname, projectname, date, clientid);
+     function(file, clientname, projectname, date){
+       $.ajax({
+               url: 'http://localhost:3000/Ainvoice',
+               method: 'post',
+               data:  {
+               file: file,
+               clientname: clientname,
+               projectname: projectname,
+               date: date,
+               clientid: clientid
+              },
+             
+                // dataType: html',
+               success: function(data) {
+                     // console.log(data);
+                    document.location.href = '/Invoicelists ';
+                         // $('#IDS').html(data);
+               }
+           });
+       }
+
+     });
+      });
+
+  
+  // function gt(file, clientname, projectname, date, clientid){
+    
+  // $.ajax({
+  //              url: 'http://localhost:3000/Ainvoice',
+  //              method: 'post',
+  //              data:  {
+  //              file: file,
+  //              clientname: clientname,
+  //              projectname: projectname,
+  //              date: date,
+  //              clientid: clientid
+  //             },
+             
+  //               // dataType: html',
+  //              success: function(data) {
+  //                    // console.log(data);
+  //                   document.location.href = '/Invoicelists ';
+  //                        // $('#IDS').html(data);
+  //              }
+  //          });
+
+  //    } 
+       
+
+ // for projectdata...
+$(document).ready(function(){
+   $('#details').on('click', function(){
+      // alert('onclick is working.');
+      Report(); //Your function 
+   });
+});
+   
+   function Report(){
+      console.log("err");                                                                                                                            
+        $.ajax({
+          url: 'http://localhost:3000/Aprojectsdetails',
+          type: 'get',
+         dataType: 'html',
+           // data: json,
+          success: function(result){
+            // alert(result);
+            document.location.href = '/Aprojectsdetails';
+          }
+        });
+       }
+      
+        function st() {
+        // console.log("err");
+        document.getElementsByClassName("ID").disabled = false;
+         var inputs = document.getElementsByClassName('my-input-class');
+         for (var i = 0; i < inputs.length; i++) {
+             inputs[i].disabled = false;
+         }
+    }
+       $(document).ready(function(){
+        $(".table_data").focus(function(){
+     var currentRow=$(this).closest("tr");
+     var col1=currentRow.find("td:eq(1) input").val();
+     var data1=col1;
+
+     var col2=currentRow.find("td:eq(2) input").val();
+     var data2=col2;
+      var col3=currentRow.find("td:eq(3) input").val();
+     var data3=col3;
+      var col4=currentRow.find("td:eq(4) input").val();
+     var data4=col4;
+       var col5=currentRow.find("td:eq(5) input").val();
+     var data5=col5;
+      var col6=currentRow.find("td:eq(6) input").val();
+     var data6=col6;
+     save(data1,data2,data3,data4,data5);
+ });
+    });
+        function save(data1,data2,data3,data4,data5){ 
+            console.log(data1);
+            console.log(data2);
+            console.log(data3);
+           console.log(data4);
+           console.log(data5);
+           console.log(data6);
+      $.ajax({
+             url: 'http://localhost:3000/Aproject',
+            
+             data:  {data1: data1, data2: data2, data3: data3, data4: data4, data5: data5, data6: data6 },
+            method: 'post',
+              // dataType: html',
+             success: function(data) {
+                  console.log(data);
+                  document.location.href = '/Aprojects';
+                       // $('#IDS').html(data);
+             }
+         });
+ }
+
+   //  $(document).ready(function(){
+   //      $(".table_data").focus(function(){
+   //   var currentRow=$(this).closest("tr");
+   //     myfunction();
+   //   });
+   // });
+
+ 
+     
+        $(document).ready(function(){ 
+            $('#link').on('click', function()
+                { 
+                    minireport(); 
+                }); 
+        }); 
+        function minireport(){ 
+            console.log("err"); 
+            $.ajax({ 
+                url: 'http://localhost:3000/Aprojects', 
+                type: 'get', 
+                dataType: 'html', 
+                success: function(result){ 
+                    document.location.href = '/Aprojects'; } 
+                }); 
+        }
+        
+       

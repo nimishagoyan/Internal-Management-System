@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=”utf-8”>
+    <title>Hurray!</title>
+  </head>
+  <body>
+    <div id=”content”>
+            <form id=”name_form”>
+               Your name:
+<input size=”40” type=”text” id=”name” />
+            <input type=”submit” />
+            </form>
+    </div>
+<script src=”https://code.jquery.com/jquery-3.1.0.min.js”>
+</script>
+<script type=”text/javascript” src=”/socket.io/socket.io.js”></script>
+<script>
+jQuery(function($){
+var socket = io.connect();
+           var $nameForm = $(‘#name_form’);
+           var $name = $(‘#name’);
+  
+           $nameForm.submit(function(e){
+                                             e.preventDefault();
+              socket.emit(‘sent’, $name.val());
+                                $name.val(‘’);
+                                    });
+  
+                  socket.on(‘receive’, function(data){
+var html = ‘<h1>Welcome ‘ + data + ‘</h1><br /><i>This message was generated using socket.io</i>’;
+$(‘#content’).html(html);
+                                    });
+                        });
+            </script>
+  </body>
+</html> 

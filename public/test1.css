@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/md.css">
+
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script> -->
+
+
+</head>
+<body>
+
+
+<div class="container"></div>
+
+<div id="exTab2" class="container"> 
+<ul class="nav nav-tabs">
+            <li class="active">
+        <a  href="#1" data-toggle="tab">Chat</a>
+            </li>
+            <li><a href="#2" data-toggle="tab">Inbox</a>
+            </li>
+            <li><a href="#3" data-toggle="tab">Outbox</a>
+            </li>
+        </ul>
+
+            <div class="tab-content ">
+              <div class="tab-pane active" id="1">
+                <form>
+                    <input type="text" name="to" value="">
+                    <!-- <h1>zkjhfskfbk</h1> -->
+
+                </form>
+                </div>
+                <div class="tab-pane" id="2">
+          <h3>Notice the gap between the content and tab after applying a background color</h3>
+                </div>
+        <div class="tab-pane" id="3">
+          <h3>add clearfix to tab-content (see the css)</h3>
+                </div>
+            </div>
+  </div>
+
+</body>
+
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<style>
+
+	#task-form { margin: 80px 0; }
+
+	 
+
+	#task-form input {
+
+	  border: 1px solid #CCC;
+
+	  height: 80px;
+
+	  width: 80%;
+
+	  padding-left: 20px;
+
+	  font-size: 20px;
+
+	  text-transform: uppercase;
+
+	  color: #666;
+
+	  float: left;
+
+	  font-family: 'Quicksand', sans-serif;
+
+	  transition: all 0.3s;
+
+	}
+
+	 
+
+	#task-form input:focus,
+
+	#task-form input:active,
+
+	#task-form button:focus,
+
+	#task-form button:active {
+
+	  outline-color: #F0553B;
+
+	  outline-width: thin;
+
+	  transition: all 0.3s;
+
+	}
+
+	 
+
+	#task-form button {
+
+	  height: 80px;
+
+	  width: 19%;
+
+	  border: 1px solid #CCC;
+
+	  background: #F0553B;
+
+	  font-size: 20px;
+	  color: #FFF;
+
+	  text-transform: uppercase;
+
+	  cursor: pointer;
+
+	  font-family: 'Quicksand', sans-serif;
+
+	  transition: all 0.3s;
+
+	  position: relative;
+
+	  border-radius: 6px;
+
+	}
+
+	 
+
+	#task-form button:before {
+
+	  height: 1px;
+
+	  width: 100%;
+
+	  background: #ff8e7b;
+
+	  position: absolute;
+
+	  content: " ";
+
+	  top: 0px;
+
+	  left: 0;
+
+	}
+
+	 
+
+	#task-form button:hover {
+
+	  opacity: 0.8;
+
+	  transition: all 0.3s;
+	}
+
+	 
+
+	#task-container ul { overflow: hidden; }
+
+	 
+
+	#task-container .task-headline {
+
+	  display: none;
+
+	  color: #666666;
+
+	  border-bottom: 1px solid #C8C7BB;
+
+	  padding-bottom: 20px;
+
+	  margin-bottom: 20px;
+
+	  font-size: 1.6em;
+
+	  position: relative;
+
+	}
+
+	 
+
+	#task-container .task-headline:before {
+
+	  height: 1px;
+
+	  width: 100%;
+
+	  background: #FFF;
+
+	  position: absolute;
+
+	  content: " ";
+
+	  bottom: 0px;
+
+	  left: 0;
+
+	}
+
+	 
+
+	#task-container .nothing-message {
+
+	  background: url("../img/logo2.png") no-repeat center 20px;
+
+	  height: 160px;
+
+	  color: #666;
+
+	  background-size: 15%;
+
+	}
+
+	 
+
+	#task-container li {
+
+	  display: none;
+
+	  float: left;
+
+	  width: 49%;
+
+	  overflow: auto;
+
+	  height: auto;
+
+	  min-height: 10px;
+
+	  background: #FFF;
+
+	  display: inline-block;
+
+	  padding: 20px;
+
+	  border: 1px solid #CCC;
+
+	  color: #666;
+
+	  border-top: 9px solid #39D1B4;
+
+	  cursor: pointer;
+
+	  margin-bottom: 10px;
+
+	  margin-right: 2%;
+
+	  transition: all 0.3s;
+
+	  position: relative;
+
+	}
+
+	 
+
+	#task-container li:nth-child(even) { margin-right: 0; }
+
+	 
+
+	#task-container li:hover {
+
+	  opacity: 0.8;
+
+	  border-top: 9px solid #F0553B;
+
+	}
+
+	 
+
+	#task-container p {
+
+	  line-height: 1.6em;
+
+	  text-align: left;
+
+	}
+
+	 
+
+	#task-container li.complete {
+
+	  opacity: 0.3;
+
+	  border-top: 9px solid #666;
+
+	  transition: all 0.3s;
+
+	}
+
+	 
+
+	#task-container li.complete:before {
+
+	  background: url("../img/complete.png") no-repeat;
+
+	  position: absolute;
+
+	  top: 5px;
+
+	  right: 5px;
+
+	  content: "";
+
+	  width: 55px;
+
+	  height: 55px;
+
+	  background-size: 100%;
+
+	}
+
+	 
+
+	#task-container li.complete:hover {
+
+	  border-top: 9px solid #F0553B;
+
+	  opacity: 0.6;
+
+	}
+
+	 
+
+	#task-container li.complete p { text-decoration: line-through; }
+
+
+	#controls {
+
+	  display: none;
+
+	  text-align: center;
+
+	  clear: both;
+
+	  margin-top: 60px;
+
+	  background: #E4E<a href="http://www.jqueryscript.net/tags.php?/3D/">3D</a>5;
+
+	  padding: 20px;
+
+	  border: 1px solid #c8c7bb;
+
+	}
+
+	 
+
+	#controls p {
+
+	  display: inline-block;
+
+	  color: #666;
+
+	  font-style: italic;
+
+	}
+
+	 
+
+	#controls p:first-child { margin-right: 20px; }
+
+	 
+
+	#clear-all-tasks {
+
+	  clear: both;
+
+	  margin-top: 20px;
+
+	  background: #999;
+
+	  border: none;
+
+	  color: #FFF;
+
+	  padding: 10px 20px;
+	  text-transform: uppercase;
+
+	  cursor: pointer;
+
+	  font-family: 'Quicksand', sans-serif;
+
+	  transition: all 0.3s;
+
+	}
+
+	 
+
+	#clear-all-tasks:hover {
+
+	  background: #666;
+
+	  transition: all 0.3s;
+
+	}
+
+	 @media (max-width: 600px) {
+
+	 
+
+	h1 {
+
+	  display: block;
+
+	  float: none;
+
+	  width: 100%;
+
+	  text-align: center;
+
+	  padding-left: 0;
+
+	  background-position: center 0;
+
+	  padding-top: 40px;
+
+	}
+
+	 
+
+	#admin-nav {
+
+	  display: block;
+
+	  float: none;
+
+	  text-align: center;
+
+	}
+
+	 
+
+	#admin-nav { margin-top: 20px; }
+
+	 
+
+	#task-form { margin-top: 110px; }
+
+	 
+
+	#task-container li,
+
+	#task-form input,
+
+	#task-form button { width: 100%; }
+
+	 
+
+	#task-form button { margin-top: 20px; }
+
+	 
+
+	#controls p { font-size: 0.8em; }
+
+	}
+
+
+
+	</style>
+</head>
+<body>
+  <section id="task-form">
+
+	  <input id="create-task" type="text" name="task-insert" placeholder="Insert your list items here">
+
+	  <button id="create-task">Create List</button>
+
+	</section>
+	<section id="task-container">
+
+	  <ul id="task-list">
+
+	    <h3 class="nothing-message">No list yet</h3>
+
+	    <h3 class="task-headline">Today's Tasks</h3>
+
+	  </ul>
+
+	  <div id="controls">
+
+	    <p>**Single Click to mark complete</p>
+
+	    <p>**Double Click to remove from list</p>
+
+	    <br>
+
+	    <button id="clear-all-tasks">Clear All Tasks</button>
+
+	  </div>
+
+	</section>
+</body>
+</html>

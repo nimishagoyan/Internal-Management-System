@@ -1,0 +1,419 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- <title>Welcome to Appwallaz</title>  -->
+     <title>Welcome To Appwallaz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+    <!-- Font Icons CSS-->
+    <link rel="stylesheet" href="https://file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+  
+  <!-- <title>Editable Invoice</title> -->
+  
+  <link rel='stylesheet' type='text/css' href='css/style.css' />
+  <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+<!--  <script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+  <script type='text/javascript' src='js/example.js'></script> -->
+  <!-- <script type="text/javascript" src="js/invoice.js"></script> -->
+
+</head>
+
+<body>
+   <body>
+    <div class="page home-page">
+      <!-- Main Navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <!-- Search Box-->
+         <!--  <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="What are you looking for..." class="form-control">
+            </form>
+          </div> -->
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <!-- Navbar Header-->
+             <div class="navbar-header">
+                <!-- Navbar Brand --><a href="/Admins" class="navbar-brand">
+                  <div class="brand-text brand-big hidden-lg-down"><span>Admin </span></div>
+                  <!-- <div class="brand-text brand-small"><strong>BD</strong></div></a> -->
+                <!-- Toggle Button-->
+              </div>
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Search-->
+                <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li> -->
+               
+                <!-- Logout    -->
+                <a href="/logout" class="nav-link logout"><li><i class="fa fa-sign-out" style="font-size: 19px;"></i></li></a>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center">
+           <% for(j=0; j< image.length; j++) { %>
+                    <div class="avatar"><img src="<%= image[j].file %>" alt="..." class="img-fluid rounded-circle"></div>
+                    <% } %>
+                    <div class="title">
+                        <h1 class="h4">ADMIN</h1>
+                        <p>Web Developer</p>
+                    </div>
+          </div>
+          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+          <ul class="list-unstyled">
+            <li> <a href="/Admins"><i class="fa fa-home" aria-hidden="true"></i>Home</a> </li>
+           
+            <!-- <li> <a href="Atables.html"> <i class="icon-grid"></i>Tables </a></li> --><div> <li><a  href="#dashvariant" aria-expanded="false" data-toggle="collapse"><i class="fa fa-files-o" aria-hidden="true"></i> Invoice</a>
+             <ul id="dashvariant" class="list-unstyled">
+                <li><a href="Ainvoice">Invoice</a></li> 
+                <li><a href="Invoicelists">Invoice List</a></li>
+                </ul>
+                </li>
+             </div>
+             <li> <a href="#dashvariant" aria-expanded="false" data-toggle="collapse"><i class="fa fa-tasks" aria-hidden="true"></i>Additional Pages</a>
+                   <ul id="dashvariant" class="list-unstyled"> 
+                      <li><a id="link" href="Aprojects">Projects</a></li>
+                       <li><a  href="projectlists">Project_List</a></li>
+                      <li><a href="Aprojectsdetails">Daliy_Task</a></li>
+                      <!-- <li><a href="currentprojects.html">Current project</a></li> -->
+                    </ul>
+                  </li>
+                    <li><a href="#dash" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-user"></i>Add Members</a>
+                    <ul id="dash" class="list-unstyled"> 
+                    <li> <a href="Addclients">Add Clients </a></li>
+                      <li> <a href="Adddevelopers">Add Developers </a></li>
+                       <li> <a href="Addadmins"> Add Admin </a></li>
+                        </ul> 
+            <li> <a href="supports"> <i class="fa fa-envelope"></i>Support </a></li>
+             <li> <a href="Aprofiles"> <i class="fa fa-user"></i>Profile </a></li> 
+          <!-- </ul> -->
+        </nav>
+        <div class="content-inner">
+          <!-- Page Header-->
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">Add Developers</h2>
+            </div>
+          </header>
+          <div class= clearfix>
+          </div> 
+
+      <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                          
+                                   <div class="clearfix">
+                                </div>
+                                   <!-- <div class="ln_solid"></div> -->
+                            <div class="x_content">
+                              <h3><i>Clients</i></h3>
+                        
+
+                       <div class="col-lg-6 offset-md-3">
+                  <div class="card" >
+                   <!--  <div class="card-close">
+                      <div class="dropdown">
+                        <button type="button" id="closeCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                        <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                      </div>
+                    </div> -->
+                   
+                  
+                      <form class="form-horizontal" action="/Adddeveloper" method="post">
+                        <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">Developer Name:</label>
+                          <div class="col-sm-9">
+                            <input  type="developername"  class="form-control form-control-success" name="username" value="">
+                          </div>
+                          <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">Developer_Gmail:</label>
+                           <div class="col-sm-9">
+                            <input  type="developername"  class="form-control form-control-success" name="gmail" value="">
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">Email:</label>
+                          <div class="col-sm-9">
+                            <input  type="text"  class="form-control form-control-warning" name="email" value="">
+                          </div>
+                        </div>
+                        
+                         <!--  <div class="form-group row">
+                          <label class="col-sm-3 rm-control-label">Clientname</label>
+                          <div class="col-sm-9">
+                            <input  type="text"  class="form-control form-control-warning" name="clientname" value="">
+                          </div>
+                        </div>
+                          <div class="form-group row">
+                          <label class="col-sm-3 form-control-label">Date</label>
+                          <div class="col-sm-9">
+                            <input  type="date"  class="form-control form-control-warning" name="date" value="">
+                          </div>
+                        </div> -->
+                        <div class="form-group row">       
+                          <div class="col-sm-9 offset-sm-3">
+                            <input type="submit" value="save" class="btn btn-primary">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!--  <div id="page-wrap">
+
+    <textarea id="header">INVOICE</textarea>
+    
+    <div id="identity">
+    
+            <textarea id="address">Appwallaz
+udai marg, Rajapark
+Phone: (555) 555-5555
+united state
+email: someone@gmail.com
+http://appwallaz.com</textarea>
+
+            <div id="logo">
+
+              <div id="logoctr">
+                <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a>
+                <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
+                
+                <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
+                <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
+              </div>
+
+              <div id="logohelp">
+                <input id="imageloc" type="text" size="50" value="" /><br />
+                (max width: 540px, max height: 100px)
+              </div>
+              <img id="image" src="images/logo.png" alt="logo" />
+            </div>
+    
+    </div>
+    
+    <div style="clear:both"></div>
+    
+    <div id="customer">
+    
+           <! <textarea id="customer-title">Widget Corp.
+c/o Steve Widget</textarea>
+ -->     <!--   <form action="/Ainvoice" method="post">
+            <table id="meta">
+                <tr>
+                    <td class="meta-head">Invoice Number </td>
+                    <td><input type="text" name="invoicenumber" value="" class="invoice">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td class="meta-head">Date</td>
+                    <td><input type= "text" name="date" value=" " class="date"></td>
+                </tr>
+                <tr>
+                    <td class="meta-head">Amount Due</td>
+                    <td><input type="text" name="amountdue" value=" " class="amountdue"></td>
+
+                </tr>
+                <tr>
+                    <td class="meta-head">Client Details</td>
+                    <td><input type="text" name="clientdetails" value=" " class="clientaddress"></td>
+                </tr> -->
+                 <!-- <th><input type="submit" /></th> -->
+               
+          <!--   </table>
+                   
+            </div>
+    
+
+    
+    <table id="items">
+    
+      <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Unit Cost</th>
+          <th>Quantity</th>
+          <th>Price</th>
+      </tr> -->
+      <!-- <form action="/Ainvoice" method=post> -->
+     <!--  <div>
+      <tr class="item-row">
+          <td class="item-name"><input type="text" name="itemname" value=" "></td>
+          <td class="description"><input type="text" name="description" value=" "></td>
+          <td><input type="text" name="cost" value=" "></td>
+          <td><input type="text" name="qty" value=" " ></td>
+          <td><input type="text" name="price" value=" " ></td> -->
+          <!-- <th><input type="submit"></th> -->
+          
+          <!-- </tr> -->
+      <!-- </form> -->
+     <!--  </div>
+       <div>
+      <tr class="item-row">
+          <td class="item-name"><input type="text" name="itemname" value=" "></td>
+          <td class="description"><input type="text" name="description" value=" "></td>
+          <td><input type="text" name="cost" value=" "></td>
+          <td><input type="text" name="qty" value=" " ></td>
+          <td><input type="text" name="price" value=" " ></td> -->
+          <!-- <th><input type="submit"></th> -->
+          
+       <!--    </tr>
+          </div>
+           <div>
+      <tr class="item-row">
+          <td class="item-name"><input type="text" name="itemname" value=" "></td>
+          <td class="description"><input type="text" name="description" value=" "></td>
+          <td><input type="text" name="cost" value=" "></td>
+          <td><input type="text" name="qty" value=" " ></td>
+          <td><input type="text" name="price" value=" " ></td> -->
+          <!-- <th><input type="submit"></th> -->
+          
+       <!--    </tr>
+          </div>
+     
+      </tr>
+      </div>
+    
+      </table>
+
+        <table id="items" style="margin-left: 510px; width: 300px;">
+                <tr> -->
+                    <!-- <td colspan="60" class="blank"></td> -->
+                 <!--    <td class="total-value">Subtotal</td>
+                    <td><input type="text" name="subtotal" value=" " class="total"></td>
+                </tr>
+                <tr> -->
+                     <!-- <td colspan="60" class="blank"></td> -->
+                  <!--   <td class="total-value">Total</td>
+                    <td><input type= "text" name="total" value=" " class="total"></td>
+                </tr>
+                <tr> -->
+                 <!-- <td colspan="60" class="blank"></td> -->
+                 <!--    <td class="total-value">Amount Paid</td>
+                    <td><input type="text" name="amountpaid" value=" " class="total"></td>
+                </tr>
+                <tr> -->
+                 <!-- <td colspan="10" class="blank"></td> -->
+              <!--       <td class="total-value">Balance Due</td>
+                    <td><input type="text" name="balancedue" value=" " class="total"></td>
+                </tr>
+                
+            </table>
+            <td><input type="submit" /></td>
+      </form> -->
+    <!--   <table id="items">
+     <tr id="hiderow">
+        <td colspan="5"><a id="addrow" href="javascript:;" title="Add a row"></a></td>
+      </tr> 
+      </table>
+      <table id="items">
+      
+      <tr>
+          <td colspan="2" class="blank"> </td>
+          <td colspan="2" class="total-line">Subtotal</td>
+          <td class="total-value"><div id="subtotal">$875.00</div></td>
+      </tr>
+      <tr>
+
+          <td colspan="2" class="blank"> </td>
+          <td colspan="2" class="total-line">Total</td>
+          <td class="total-value"><div id="total">$875.00</div></td>
+      </tr>
+      <tr>
+          <td colspan="2" class="blank"> </td>
+          <td colspan="2" class="total-line">Amount Paid</td>
+
+          <td class="total-value"><textarea id="paid">$0.00</textarea></td>
+      </tr>
+      <tr>
+          <td colspan="2" class="blank"> </td>
+          <td colspan="2" class="total-line balance">Balance Due</td>
+          <td class="total-value balance"><div class="due">$875.00</div></td>
+      </tr> -->
+    
+    <!-- </table> -->
+    
+  <!--  <div id="terms">
+      <h5>Terms</h5>
+      <textarea>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
+    </div>
+   -->
+  </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Your company &copy; 2017-2019</p>
+                </div>
+                <div class="col-lg-12 text-right">
+                    <p>Design by Appwallaz</p>
+                    <!--Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"> </script>
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+   <!-- S<script src="js/admin.js"></script>  -->
+    <script src="js/front.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!---->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+ 
+  </body>
+</html>
+  

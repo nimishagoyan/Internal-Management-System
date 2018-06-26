@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Appwallaz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Font Awesome CDN-->
+    <!-- you can replace it by local Font Awesome-->
+    <script src="https://use.fontawesome.com/99347ac47f.js"></script>
+    <!-- Font Icons CSS-->
+    <link rel="stylesheet" href="https://file.myfontastic.com/da58YPMQ7U5HY8Rb6UxkNf/icons.css">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <style>
+    .red {
+        color: red;
+    }
+
+    .green {
+        color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page home-page">
+        <!-- Main Navbar-->
+        <header class="header">
+            <nav class="navbar">
+                <!-- Search Box-->
+               <!--  <div class="search-box">
+                    <button class="dismiss"><i class="icon-close"></i></button>
+                    <form id="searchForm" action="#" role="search">
+                        <input type="search" placeholder="What are you looking for..." class="form-control">
+                    </form>
+                </div> -->
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <!-- Navbar Header-->
+                        <div class="navbar-header">
+                            <!-- Navbar Brand -->
+                            <a href="/Developers" class="navbar-brand">
+                                <div class="brand-text brand-big hidden-lg-down"><span>
+                  Developer </span></div>
+                                <!-- <div class="brand-text brand-small"><strong>BD</strong></div></a> -->
+                                <!-- Toggle Button-->
+                        </div>
+                        <!-- Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <!-- Search-->
+                            <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li> -->
+                            <!-- Logout    -->
+                            <a href="/logout" class="nav-link logout">
+                                <li><i class="fa fa-sign-out" style="font-size: 19px;"></i></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                <!-- Sidebar Header-->
+                <div class="sidebar-header d-flex align-items-center">
+                    <% for(j=0; j< image.length; j++) { %>
+                    <div class="avatar"><img src="<%= image[j].file %>" alt="..." class="img-fluid rounded-circle"></div>
+                    <% } %>
+                    <div class="title">
+                        <h1 class="h4">Developer</h1>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+                <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+                <ul class="list-unstyled">
+                    <!-- <li> <a href="#dashvariants" aria-expanded="false" data-toggle="collapse"><i class="icon-home"></i>Home</a>
+              <ul id="dashvariants" class="list-unstyled">
+                      <li><a href="index.html">Dashboard</a></li>
+                      <li><a href="index1.html">Dashboard1</a></li>
+                      <li><a href="index2.html">Dashboard2</a></li>
+                    </ul>
+                  </li>  -->
+                    <li> <a href="/Developers"><i class="fa fa-home" aria-hidden="true"></i>Home</a> </li>
+                    <!-- <li> <a href="index2.html"><i class="icon-home"></i>Home</a> -->
+                    <!--  <ul id="dashvariants" class="list-unstyled">
+                      <! <li><a href="index.html">Dashboard</a></li> -->
+                    <!-- <li><a href="index1.html">Dashboard1</a></li> -->
+                    <!-- <li><a href="index2.html">Dashboard3</a></li> -->
+                    <!-- </ul> -->
+                    <!-- </li>  -->
+                    <!-- <li> <a href="Dtables.html"> <i class="icon-grid"></i>Tables </a></li> -->
+                    <!-- <li> <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li> -->
+                    <!-- <li><a href="#"><i class="fa-files-o" aria-hidden="true"></i> Invoice</a> -->
+                    <!-- <li> <a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li> -->
+                    <!-- <li> <a href="login.html"> <i class="icon-interface-windows"></i>Login Page</a></li> -->
+                    <!-- </ul><span class="heading">Extras</span>
+          <ul class="list-unstyled"> -->
+                    <li> <a href="#dashvariant" aria-expanded="false" data-toggle="collapse"><i class="fa fa-tasks" aria-hidden="true"></i>Additional Pages</a>
+                        <ul id="dashvariant" class="list-unstyled">
+                            <li>
+                                <a id="mylink" href="Dprojects">projects</a>
+                            </li>
+                            <li><a href="Dprojectsdetails">Daliy_Task</a></li>
+                            <!-- <li><a href="currentprojects.html">Current project</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
+            <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li> -->
+                    <li> <a href="dsupports"> <i class="fa fa-envelope"></i>Support </a></li>
+                    <li> <a href="dprofiles"> <i class="fa fa-user"></i>Profile </a></li>
+                    <!-- </ul> -->
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">Recent-Activity</h2>
+                    </div>
+                </header>
+                <!-- < Dashboard Counts Section > -->
+                <!-- < project file> -->
+                <!--  <div class>
+                    <div class="page-title">
+                        -->
+                <!--   <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                                </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!--      </div>
+                </div> -->
+                <div class="clearfix">
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                            <div class="x_content">
+                                <!-- <button type="button" id="create-task" class="task">View Task</button>  -->
+                                <table class="table table-striped projects">
+                                    <thead style="background-color: rgba(121, 106, 238, 0.9);">
+                                        <tr style="color: #fff">
+                                            <!-- <th style="width: 1%">#</th> -->
+                                            <th style="width: 50px;">Task</th>
+                                            <!-- <th></th> -->
+                                            <th></th>
+                                            <th></th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for( var i = 0; i< data.length; i++) { %>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="taskelement" name='task_insert' value="<%= data[i].task_insert %>" style=" background-color: transparent;border: none; padding: 10px;" disabled>
+                                                </td>
+                                                <!-- <td>
+                                                    <input type="text" class="taskelement" name='projectname' value="<%= data[i].projectname %>" style=" background-color: transparent;border: none; padding: 10px;" disabled>
+                                                </td> -->
+                                                <td>
+                                                    <input type="hidden" id="ip" name='status' value="<%= data[i].status %>" style=" background-color: transparent;border: none; padding: 10px;" disabled>
+                                                </td>
+                                                <td>
+                                                    <input type="hidden" name="_id" value="<%= data[i]._id %>" style=" background-color: transparent;border: none; padding: 10px;" disabled>
+                                                    <td class="clear">
+                                                        <input type="image" id="imagen" src="<%= data[i].imgpath %>" value="url" style=" height: 50px" name="imgpath">
+                                                    </td>
+                                                    <!--  <img id="imagen1" src="img/pending.jpg" style="display:none; height: 50px"> -->
+                                                    <!-- </td> -->
+                                                    <!--  <div class="input-group-btn"> -->
+                                                    <!-- <td> -->
+                                                    <!--   <img src="img/pending.jpg" id="test"  class="clear" style="height: 50px" /> -->
+                                                    <!-- <button type="button"  id="ipclear">Tick</button> -->
+                                                    <!--  <img src="img/signs (1).png" id="test" style="height: 20px" onclick="change2()" />  -->
+                                                    <!-- </td> -->
+                                                    <!-- <img src="img/complete.png" id="test" onclick ="change3();"/> -->
+                                                    <!-- </div> -->
+                                            </tr>
+                                            <% } %>
+                                    </tbody>
+                                </table>
+                                <!-- </form> -->
+                                <!--  <div id="controls">
+                                            <p>**Single Click to mark complete</p>
+                                            <p>**Double Click to remove from list</p>
+                                            <br />
+                                            <!<button id="clear-all-tasks">Clear All Tasks</button> -->
+                                <!--    <ul id="task-list">
+                                           
+                                            <h3 class="task-headline">Today's Tasks</h3>
+                                              <div class="row">
+                                         
+                                                <div class="col-md-5" style="border: 1px solid rgba(0, 0, 0, 0.26);height: 70px;">
+                                                    <p>
+                                                       
+                                                    </p>
+                                                </div>
+                                        
+                                               
+                                        </div>
+                                        </ul>
+                                        <div id="controls">
+                                            <p>**Single Click to mark complete</p>
+                                            <p>**Double Click to remove from list</p>
+                                            <br />
+                                            <button id="clear-all-tasks">Clear All Tasks</button>
+                                        </div>
+                                        -->
+                                <!--  -->
+                                <!-- <rm> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+    <!--Page Footer-->
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Your company &copy; 2017-2019</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p>Design by Appwallaz
+                    </p>
+                    <!--Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--         </div> -->
+    <!-- </div> -->
+    <!--  </div> -->
+    <!-- Javascript files-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <!-- <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> -->
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js">
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+    <!-- <script src="js/admin.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/front.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!---->
+    <script>
+    $(document).ready(function() {
+        $(".clear").on('click', function(event) {
+               console.log(event);
+           // var status1 = document.getElementById("ip").value;
+           // alert(status1);
+           
+            var currentRow = $(this).closest("tr");
+            var col1 = currentRow.find("td:eq(0) input").val();
+            var task = col1;
+            // alert(task);
+            var col2 = currentRow.find("td:eq(1) input").val();
+            var status = col2;
+            // alert(status);
+          
+            // alert(status);
+            var col3 = currentRow.find("td:eq(2) input").val();
+            var id = col3;
+
+              
+             var col4 = currentRow.find('td:eq(3) input').attr('src');
+
+            var imgurl = col4;
+
+
+            // alert(imgurl);
+            change(status, id);
+            // $(this).toggleClass('btn-default').toggleClass('btn-warning');
+        });
+    });
+
+    function change(status, id) {
+        console.log(status);
+        console.log(id);
+        // console.log(imgurl);
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/Dprojectdetails',
+            data: { status: status, id: id },
+             dataType: 'json',
+             encode: true,
+            success: function(data) {
+                       console.log((data));
+                 // document.location.href = '/Dprojectsdetails';
+               window.location = 'http://localhost:3000/Dprojectsdetails';
+
+            },
+            error: function(err) {
+                console.log(err);
+
+                // alert(err);
+
+            }
+        })
+      event.preventDefault();
+      
+  }
+    </script>
+
+   <!--  <script>
+    function changeImage(element) {
+        element.src = element.bln ? "img/pending.jpg" : "img/complete.png";
+        element.bln = !element.bln; /* assigns opposite boolean value always */
+    }
+    // alert(id);
+    //  var toggleText =  $(this).toggleClass('complete');
+    //   alert(toggleText);
+    // });
+    // $('button').click(function() {
+    // if ($("#ip").val() == 'complete'){
+    //      toggleText = $('#ip').val();
+    //      // alert(toggleText);
+    //      $("#ip").val('Uncomplete');
+    //     var status1 = document.getElementById('ip').value;
+    //   alert(status1);
+    //    var id= document.getElementById('ip1').value;
+    //   alert(id);  
+    // } 
+    //  else if ($("#ip").val() != 'complete') {
+
+    //    toggleText = $("#ip").val();
+    //    $("#ip").val('complete');
+
+    //   var status1 = document.getElementById('ip').value;
+    //   alert(status1);
+    //   var id= document.getElementById('ip1').value;
+    //    alert(id);
+
+    //   }
+    </script> -->
+</body>
+
+</html>

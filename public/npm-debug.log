@@ -1,0 +1,87 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'express' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 verbose config Skipping project config: C:\Users\3537/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData express
+9 silly fetchNamedPackageData express
+10 silly mapToRegistry name express
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'express',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'express',
+13 silly mapToRegistry   name: 'express',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/express
+15 verbose request uri https://registry.npmjs.org/express
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 8:50:42 PM
+18 verbose request id 67a49d1e5410aa74
+19 http request GET https://registry.npmjs.org/express
+20 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+21 info attempt registry request try #2 at 8:51:13 PM
+22 http request GET https://registry.npmjs.org/express
+23 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+24 info attempt registry request try #3 at 8:52:34 PM
+25 http request GET https://registry.npmjs.org/express
+26 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+26 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+26 silly fetchPackageMetaData     at ClientRequest.g (events.js:292:16)
+26 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+26 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+26 silly fetchPackageMetaData     at Socket.socketErrorListener (_http_client.js:310:9)
+26 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+26 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+26 silly fetchPackageMetaData     at emitErrorNT (net.js:1277:8)
+26 silly fetchPackageMetaData     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+26 silly fetchPackageMetaData     at process._tickCallback (internal/process/next_tick.js:104:9)
+26 silly fetchPackageMetaData  error for express { Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+26 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+26 silly fetchPackageMetaData     at ClientRequest.g (events.js:292:16)
+26 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+26 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+26 silly fetchPackageMetaData     at Socket.socketErrorListener (_http_client.js:310:9)
+26 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+26 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+26 silly fetchPackageMetaData     at emitErrorNT (net.js:1277:8)
+26 silly fetchPackageMetaData     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+26 silly fetchPackageMetaData     at process._tickCallback (internal/process/next_tick.js:104:9) code: 'ECONNRESET' }
+27 silly rollbackFailedOptional Starting
+28 silly rollbackFailedOptional Finishing
+29 silly runTopLevelLifecycles Finishing
+30 silly install printInstalled
+31 verbose stack Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+31 verbose stack     at ClientRequest.onError (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+31 verbose stack     at ClientRequest.g (events.js:292:16)
+31 verbose stack     at emitOne (events.js:96:13)
+31 verbose stack     at ClientRequest.emit (events.js:188:7)
+31 verbose stack     at Socket.socketErrorListener (_http_client.js:310:9)
+31 verbose stack     at emitOne (events.js:96:13)
+31 verbose stack     at Socket.emit (events.js:188:7)
+31 verbose stack     at emitErrorNT (net.js:1277:8)
+31 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+31 verbose stack     at process._tickCallback (internal/process/next_tick.js:104:9)
+32 verbose cwd C:\Users\3537\Desktop\office projects\bootstrap4material\bootstrap-4-material-admin
+33 error Windows_NT 6.3.9600
+34 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "express"
+35 error node v6.11.2
+36 error npm  v3.10.10
+37 error code ECONNRESET
+38 error network tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.0.1:80
+39 error network This is most likely not a problem with npm itself
+39 error network and is related to network connectivity.
+39 error network In most cases you are behind a proxy or have bad network settings.
+39 error network
+39 error network If you are behind a proxy, please make sure that the
+39 error network 'proxy' config is set properly.  See: 'npm help config'
+40 verbose exit [ 1, true ]
